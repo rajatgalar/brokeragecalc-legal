@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete My Data – Brokerage Calc</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f9fafb;
+            color: #1a1a2e;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 48px 24px;
+            text-align: center;
+        }
+
+        header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+        header p { color: #a0aec0; font-size: 0.95rem; }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 24px 60px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 36px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border-left: 4px solid #6c63ff;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p { color: #4a5568; margin-bottom: 12px; font-size: 0.97rem; }
+
+        ul { list-style: none; padding: 0; margin: 10px 0; }
+        ul li {
+            color: #4a5568;
+            padding: 6px 0 6px 24px;
+            position: relative;
+            font-size: 0.97rem;
+        }
+        ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #6c63ff;
+            font-weight: bold;
+        }
+
+        .step {
+            background: #6c63ff10;
+            border: 1px solid #6c63ff30;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 10px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .step-number {
+            background: #6c63ff;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .step-text { color: #4a5568; font-size: 0.97rem; }
+
+        .highlight {
+            background: #f0fff4;
+            border: 1px solid #9ae6b4;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 14px 0;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .email-button {
+            display: inline-block;
+            background: #6c63ff;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 8px;
+        }
+
+        .email-button:hover { background: #5a52e0; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+
+        th {
+            background: #6c63ff15;
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #1a1a2e;
+        }
+
+        td {
+            padding: 10px 14px;
+            font-size: 0.9rem;
+            color: #4a5568;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .deleted { color: #e53e3e; font-weight: 600; }
+        .kept { color: #38a169; font-weight: 600; }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: #a0aec0;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🗑️ Delete My Data</h1>
+    <p>Brokerage Calc : Upstox Zerodha &nbsp;·&nbsp; By Rajat Galar</p>
+</header>
+
+<div class="container">
+
+    <!-- Intro -->
+    <div class="card">
+        <h2>📋 Overview</h2>
+        <p>
+            This page explains how to request deletion of your data associated with
+            <strong>Brokerage Calc : Upstox Zerodha</strong>.
+        </p>
+        <div class="highlight">
+            ✅ <strong>Good news:</strong> Most of your data (trade history, preferences,
+            calculator values) is stored <strong>only on your device</strong> and is
+            automatically deleted when you uninstall the app. No action needed from us.
+        </div>
+    </div>
+
+    <!-- What data exists -->
+    <div class="card">
+        <h2>📦 What Data We Hold</h2>
+        <table>
+            <tr>
+                <th>Data Type</th>
+                <th>Where Stored</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Trade history, preferences, calculator values</td>
+                <td>Your device only</td>
+                <td class="deleted">Deleted on uninstall</td>
+            </tr>
+            <tr>
+                <td>FCM device token (for notifications)</td>
+                <td>Firebase (Google)</td>
+                <td class="deleted">Deleted on request</td>
+            </tr>
+            <tr>
+                <td>Purchase & subscription history</td>
+                <td>RevenueCat servers</td>
+                <td class="kept">Kept for 90 days after request*</td>
+            </tr>
+        </table>
+        <p style="margin-top:12px; font-size:0.85rem; color:#718096;">
+            * Purchase records may be retained for up to 90 days for legal and
+            financial compliance purposes before being permanently deleted.
+        </p>
+    </div>
+
+    <!-- How to delete -->
+    <div class="card">
+        <h2>🔧 How to Delete Your Data</h2>
+
+        <p><strong>Option 1 — Delete local data instantly (no email needed):</strong></p>
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-text">
+                Go to your device <strong>Settings → Apps → Brokerage Calc</strong>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-text">
+                Tap <strong>Storage → Clear Data</strong> — this deletes all local trade
+                history, preferences, and calculator data immediately
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-text">
+                Or simply <strong>Uninstall the app</strong> — all local data is
+                permanently deleted
+            </div>
+        </div>
+
+        <p style="margin-top: 20px">
+            <strong>Option 2 — Request deletion of RevenueCat/Firebase data:</strong>
+        </p>
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-text">
+                Send an email to us with subject line:
+                <strong>"Data Deletion Request — Brokerage Calc"</strong>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-text">
+                Include your <strong>Google Play account email</strong> so we can
+                identify your records
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-text">
+                We will process your request within <strong>7 business days</strong>
+                and confirm via email once done
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-top: 24px;">
+            <a class="email-button"
+               href="mailto:itechnowizard12@gmail.com?subject=Data Deletion Request — Brokerage Calc">
+                ✉️ Send Deletion Request
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+        <h2>📬 Contact</h2>
+        <p>
+            For any questions about data deletion, contact us at:<br>
+            <strong>itechnowizard12@gmail.com</strong>
+        </p>
+        <p style="font-size:0.9rem; color:#718096;">
+            Rajat Galar · Brokerage Calc : Upstox Zerodha · India
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Rajat Galar · Brokerage Calc : Upstox Zerodha · All rights reserved
+</footer>
+
+</body>
+</html>
