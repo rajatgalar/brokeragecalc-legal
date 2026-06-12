@@ -157,7 +157,7 @@
 </header>
 
 <div class="effective-date">
-    Effective Date: January 1, 2026 &nbsp;·&nbsp; Last Updated: May 1, 2026
+    Effective Date: January 1, 2026 &nbsp;·&nbsp; Last Updated: June 13, 2026
 </div>
 
 <div class="container">
@@ -172,7 +172,8 @@
         </p>
         <div class="highlight">
             <strong>Short version:</strong> Your trade data never leaves your device. We don't have a
-            server. We don't sell your data. We don't even see it.
+            server. We don't sell your data. We use third-party services for analytics, crash
+            reporting, subscriptions, and advertising — each described below.
         </div>
     </div>
 
@@ -197,12 +198,17 @@
             <li>
                 <strong>Firebase (Google)</strong> — collects your device token (FCM token) to deliver
                 push notifications. Also collects basic device info (OS version, device model) for
-                crash reporting.
+                crash reporting and app analytics.
             </li>
             <li>
                 <strong>RevenueCat</strong> — collects purchase history and subscription status to
                 manage your premium subscription. This is processed securely by RevenueCat on their
                 servers.
+            </li>
+            <li>
+                <strong>Google AdMob</strong> — collects your advertising identifier, device
+                information, IP address, and ad interaction data to display advertisements within
+                the App. See the "Advertising" section below for details.
             </li>
         </ul>
     </div>
@@ -216,9 +222,59 @@
             <li>To send you relevant push notifications (new features, updates)</li>
             <li>To manage your premium subscription status</li>
             <li>To restore your purchase if you reinstall the app</li>
+            <li>To display advertisements to free users and measure ad performance</li>
+            <li>To understand how the App is used so we can improve it (analytics)</li>
+            <li>To detect and diagnose crashes so we can fix them</li>
         </ul>
-        <p>We do <strong>not</strong> use your data for advertising, profiling, or any purpose
-        beyond operating the App.</p>
+        <p>We do <strong>not</strong> sell your data or use it for any purpose
+        beyond operating, advertising within, and improving the App.</p>
+    </div>
+
+    <!-- Advertising -->
+    <div class="card">
+        <h2><span class="icon">📢</span> Advertising</h2>
+        <p>
+            This App is supported by advertisements provided through
+            <strong>Google AdMob</strong> for free users. Premium subscribers do not see ads.
+        </p>
+        <ul>
+            <li>AdMob may collect your device's advertising identifier (Advertising ID), IP
+                address, general location, device information, and ad interaction data</li>
+            <li>This data is used to show ads and may be used to personalize ads based on your
+                interests, unless you opt out</li>
+            <li>The App displays banner ads, interstitial (full-screen) ads, and optional
+                rewarded ads that you can choose to watch in exchange for a temporary
+                ad-free experience</li>
+        </ul>
+        <div class="highlight">
+            You can opt out of personalized advertising at any time from your device settings:
+            <strong>Settings → Privacy → Ads</strong> (or Settings → Google → Ads on some
+            devices), by enabling "Opt out of Ads Personalization".
+        </div>
+        <p>
+            Google AdMob Privacy Policy:
+            <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a>
+        </p>
+    </div>
+
+    <!-- Analytics & Crash Reporting -->
+    <div class="card">
+        <h2><span class="icon">📊</span> Analytics & Crash Reporting</h2>
+        <p>
+            We use <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>
+            (both Google services) to understand how the App is used and to detect crashes.
+        </p>
+        <ul>
+            <li>Analytics data includes screens visited, features used, session length, and
+                general device/location information — this data is aggregated and does not
+                directly identify you</li>
+            <li>Crashlytics collects crash logs, device model, OS version, and app state at
+                the time of a crash to help us fix bugs</li>
+        </ul>
+        <p>
+            This data helps us improve the App's features, fix issues, and make better
+            decisions about future updates.
+        </p>
     </div>
 
     <!-- Local storage -->
@@ -242,6 +298,7 @@
         <p>
             The App offers optional premium subscriptions (Monthly and Annual) processed through
             <strong>Google Play Billing</strong> and managed by <strong>RevenueCat</strong>.
+            Premium subscribers do not see advertisements anywhere in the App.
         </p>
         <ul>
             <li>Payments are processed by Google Play — we never see your payment details</li>
@@ -282,8 +339,12 @@
         <p>The App uses the following third-party services. Each has its own privacy policy:</p>
         <ul>
             <li>
-                <strong>Google Firebase</strong> —
+                <strong>Google Firebase (Analytics, Crashlytics, Cloud Messaging, Remote Config)</strong> —
                 <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+            </li>
+            <li>
+                <strong>Google AdMob</strong> —
+                <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a>
             </li>
             <li>
                 <strong>RevenueCat</strong> —
@@ -303,7 +364,7 @@
         <p>
             This App is intended for users aged <strong>18 and above</strong> as it relates to
             stock market trading and financial calculations. We do not knowingly collect data
-            from children under 13.
+            from children under 13, and ads served through AdMob are not directed at children.
         </p>
     </div>
 
@@ -316,8 +377,9 @@
             updated and secured.
         </p>
         <p>
-            For subscription data, RevenueCat uses industry-standard encryption and security
-            practices to protect your purchase information.
+            For subscription, analytics, and advertising data, our third-party providers
+            (RevenueCat, Google Firebase, Google AdMob) use industry-standard encryption and
+            security practices to protect this information.
         </p>
     </div>
 
@@ -328,6 +390,7 @@
         <ul>
             <li>Delete all local data by uninstalling the App</li>
             <li>Opt out of push notifications via device settings</li>
+            <li>Opt out of personalized ads via device settings</li>
             <li>Cancel your subscription at any time via Google Play</li>
             <li>Request deletion of your RevenueCat data by contacting us</li>
         </ul>
@@ -360,7 +423,7 @@
 </div>
 
 <footer>
-    © 2025 Rajat Galar · Brokerage Calc : Upstox Zerodha · All rights reserved
+    © 2026 Rajat Galar · Brokerage Calc : Upstox Zerodha · All rights reserved
 </footer>
 
 </body>
